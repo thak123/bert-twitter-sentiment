@@ -1,14 +1,14 @@
 ## Latvian Twitter Sentiment
-This is the repository for the paper **Pretraining and Fine-Tuning Strategies for Sentiment Analysis of Latvian Tweets**. Documentation updation in-progress.
+Code repository for the paper **Pretraining and Fine-Tuning Strategies for Sentiment Analysis of Latvian Tweets**.
 
 ### 
 
 ### Data
-- Since the twiiter data cannot be shared directly due to twitter terms, kindly refer https://github.com/pmarcis/latvian-tweet-corpus for the data.
+- Since the twitter data cannot be shared directly due to twitter terms, kindly refer https://github.com/pmarcis/latvian-tweet-corpus for the data.
 
 ### Requirements
 - Pretrained Latvian twitter language model FFZG-cleopatra/bert-emoji-latvian-twitter
--  
+- fin 
 ### How to run
 - Either download the pretrained models or train new bert models using 
   - mBERT https://github.com/huggingface/transformers/blob/master/examples/language-modeling/
