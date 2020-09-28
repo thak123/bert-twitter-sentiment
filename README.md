@@ -29,7 +29,7 @@ Gaurish Thakkar and  Mārcis Pinnis. (2020). [Pretraining and Fine-Tuning Strate
 
 #### BibTeX
 ```bibtex
-@inproceedings{Bergmanis2020,
+@inproceedings{thakkar2020sentiment,
   address = {Kaunas, Lithuania},
   author = {Thakkar, Gaurish and Pinnis, M\=arcis},
   booktitle = {Human Language Technologies – The Baltic Perspective - Proceedings of the Ninth International Conference Baltic HLT 2020},
