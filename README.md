@@ -28,7 +28,7 @@ Accuracy score of around 76% on time-balanced dataset.
 Gaurish Thakkar and  Mārcis Pinnis. (2020). [Pretraining and Fine-Tuning Strategies for Sentiment Analysis of Latvian Tweets](http://ebooks.iospress.nl/volumearticle/55523). In Human Language Technologies – The Baltic Perspective - Proceedings of the Ninth International Conference Baltic HLT 2020. 55-61. IOS Press.
 
 #### BibTeX
-```
+```bibtex
 @inproceedings{Bergmanis2020,
   address = {Kaunas, Lithuania},
   author = {Thakkar, Gaurish and Pinnis, M\=arcis},
