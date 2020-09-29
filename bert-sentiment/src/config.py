@@ -1,26 +1,24 @@
 import transformers
 import os
+import torch
 
 MAX_LEN = 150 #256
 TRAIN_BATCH_SIZE = 8
 VALID_BATCH_SIZE = 4
 EPOCHS = 5
 
-DATASET_LOCATION = "/mnt/c/Users/gaurish.thakkar/Desktop/lv-twitter-data-csv/lv-twitter-data-csv/"
-MODEL_PATH = "/mnt/c/Users/gaurish.thakkar/Desktop/mbert-2epoch-gold-lower/model.bin"
+# Processed training, development and evaluation files
+TRAIN_PROC = ""
+DEVEL_PROC = ""
+EVAL_PROC = ""
 
+# Path to save sentiment analysis model
+MODEL_PATH = "model.bin"
 
-# MBERT Raw Version
-# BERT_PATH = "bert-base-multilingual-cased"
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-# 2 EPOCH Version
-# BERT_PATH = "/home/TILDE.LV/gaurish.thakkar/experiments/bert-twitter-fine-tunning/LatvianTwittermBERT-v1"
-
-# 7 EPOCH Version
-BERT_PATH = "/mnt/c/Users/gaurish.thakkar/Desktop/LatvianTwittermBERT-v1"
-
-# 7 EPOCH Version + emoticons
-# BERT_PATH = "/home/TILDE.LV/gaurish.thakkar/experiments/bert-twitter-language-pretraining/models/LatvianTwittermBERT-v2/checkpoint-106000"
+# Path to the best BERT model checkpoint adapted using bert-twitter-language-pretraining or just MBERT Raw Version
+BERT_PATH = ""
 
 # TODO check if lower casing is required
 # BertTokenizer
@@ -32,13 +30,13 @@ TOKENIZER = transformers.BertTokenizer.from_pretrained(
 #####################################################################################################################################
 # Electra
 # Step 1: Model path
-# BERT_PATH = "/home/TILDE.LV/gaurish.thakkar/experiments/lmtuners/experiments/disc_lm_small/electra-small/discriminator/final"
-# #"/home/TILDE.LV/gaurish.thakkar/experiments/lmtuners/experiments/disc_lm_small/albert-small/final"
+# BERT_PATH = "lmtuners/experiments/disc_lm_small/electra-small/discriminator/final"
+# #"lmtuners/experiments/disc_lm_small/albert-small/final"
 
 # # Step 2: Vocab and Lowercase setting
 # TOKENIZER = transformers.BertTokenizer.from_pretrained(
-# 	"/home/TILDE.LV/gaurish.thakkar/experiments/lmtuners/experiments/disc_lm_small/lvtwitterbwpt-vocab-lower_accent.txt",
-#     # "/home/TILDE.LV/gaurish.thakkar/experiments/lmtuners/experiments/disc_lm_small/bert-base-multilingual-cased-vocab.txt",
+# 	"lmtuners/experiments/disc_lm_small/lvtwitterbwpt-vocab-lower_accent.txt",
+#     # "lmtuners/experiments/disc_lm_small/bert-base-multilingual-cased-vocab.txt",
 #     do_lower_case=True
 # )
 
