@@ -4,6 +4,13 @@ Performs 3 class(Positive, Negative and Neutral) classification on Latvian tweet
 
 ### Data
 - Latvian Tweet Corpus. Since the twitter data cannot be shared directly due to twitter terms, kindly refer https://github.com/pmarcis/latvian-tweet-corpus for the data.
+- Format - csv with label (0 - neutral; 1 - positive; 2 - negative) and text:
+```
+label,text
+1,"@maljorka Hehe, man tad labāk garšo bez nekā, nevis šādi. :D Ai, gaumes ir tik atšķirīgas."
+0,@IngaStirna Ābolu šarlote.
+2,"Šodien bijām pie vecmāmiņas (malka + jāaizved lietas). Es gaidīju, ka paliks labāk, un man viņas pietrūks mazāk, bet mēs ar viņu varējām sarunāties tikai caur logu un pusdienu vietā apēdām bulciņas mašīnā. Nav ok."
+```
 
 ### How to run
 - #### Train
@@ -15,13 +22,15 @@ Performs 3 class(Positive, Negative and Neutral) classification on Latvian tweet
     - Update train.py for the locations of the dataset
     - train.py expects pre-processed and pre-split data files( train, dev, test)
 - #### Predict
+  - Either train the model from scatch or download the pretrained mode from https://ffzghr-my.sharepoint.com/:f:/g/personal/gthakkar_m_ffzg_hr/EoCPu_Z4dhJPuRPGUipBra0BVLOe9e2a-kHuKGdtOjcoyA?e=7cjzIg
   - To perform a prediction on file, create a csv file with tweets with header **text** and  **label**. The label column is blank.
   - `python predict.py --test_file  --model_path `. where ignore the model_path flag if it is set in config.py. Pass the test_file created in previous step.
 
 - #### DEMO
- -`python app.py`
+  - To run demo locally `python app.py`
+  - Visit http://cleopatra.ijs.si/sentimentanalyzer/demo for the live demo
 
-### Performance Metrices
+### Performance Metrics
 Accuracy score of around 76% on time-balanced dataset.
 
 ### Publication
@@ -45,3 +54,6 @@ Gaurish Thakkar and  Mārcis Pinnis. (2020). [Pretraining and Fine-Tuning Strate
 The project has received funding from the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie grant agreement no. 812997.
 
 ### This work was done as a part of internship at [TILDE](www.tilde.com).
+
+### License
+This work is MIT licensed. See the LICENSE file for full details.
